@@ -2,6 +2,15 @@
   "version": 2,
   "name": "nodejs",
   "builds": [
-    { "src": "src/*.js", "use": "@now/node-server" }
-  ]
+    { "src": "src/date.js", "use": "@now/node" },
+    { "src": "README.md", "use": "@now/static" },
+    { "src": "src/fs.js", "use": "@now/node-server" }
+  ],
+  "routes": [
+    { "src": "/readme", "dest": "/README.md" },
+    { "src": "/(fs.*)", "dest": "/src/fs.js" },
+    { "src": "/date", "dest": "/src/date.js" }
+  ],
+  "regions": ["sfo1"],
+  "public": true
 }
