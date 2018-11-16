@@ -5,14 +5,15 @@
     { "src": "src/date.js", "use": "@now/node" },
     { "src": "README.md", "use": "@now/static" },
     { "src": "src/mongo.js", "use": "@now/node-server" },
+    { "src": "src/koa.js", "use": "@now/node" },
     { "src": "src/fs.js", "use": "@now/node-server" }
   ],
   "routes": [
     { "src": "/readme", "dest": "/README.md" },
     { "src": "/(fs.*)", "dest": "/src/fs.js" },
     { "src": "/date", "dest": "/src/date.js" },
+    { "src": "/koa", "dest": "/src/koa.js" },
     { "src": "/(cat.*)", "dest": "/src/mongo.js" }
   ],
-  "regions": ["iad1"],
   "public": true
 }

@@ -1,7 +1,3 @@
 {
-  "env": {
-    "es6": true,
-    "commonjs": true
-  },
   "extends": "standard"
 }
