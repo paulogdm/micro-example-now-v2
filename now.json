@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "name": "nodejs",
+  "name": "sandbox",
   "builds": [
     { "src": "src/date.js", "use": "@now/node" },
     { "src": "README.md", "use": "@now/static" },
-    { "src": "src/mongo.js", "use": "@now/node-server" },
-    { "src": "src/koa.js", "use": "@now/node" },
-    { "src": "src/fs.js", "use": "@now/node-server" }
+    { "src": "src/mongo.js", "use": "@now/node-server@canary" },
+    { "src": "src/koa.js", "use": "@now/node@canary" },
+    { "src": "src/fs.js", "use": "@now/node-server@canary" }
   ],
   "routes": [
     { "src": "/readme", "dest": "/README.md" },
@@ -15,5 +15,9 @@
     { "src": "/koa", "dest": "/src/koa.js" },
     { "src": "/(cat.*)", "dest": "/src/mongo.js" }
   ],
+  "env": {
+    "mongo_cat_user": "@mongo_cat_user",
+    "mongo_cat_pass": "@mongo_cat_pass"
+  },
   "public": true
 }

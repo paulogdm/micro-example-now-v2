@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/paulogdm/micro-example-now-v2#readme",
   "dependencies": {
+    "koa": "^2.6.2",
     "micro": "^9.3.3",
     "micro-fork": "^0.1.1",
     "mongoose": "^5.3.11"

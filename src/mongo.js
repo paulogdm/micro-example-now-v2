@@ -12,9 +12,7 @@ const dbpassword = process.env.mongo_cat_pass
 
 // connecting to mongo
 mongoose.connect(`mongodb://${dbuser}:${dbpassword}@ds043170.mlab.com:43170/catdb`, {
-  useNewUrlParser: true,
-  bufferCommands: false,
-  bufferMaxEntries: 0
+  useNewUrlParser: true
 })
 
 // List all kittens
