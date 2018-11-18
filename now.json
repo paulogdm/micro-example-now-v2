@@ -4,9 +4,9 @@
   "builds": [
     { "src": "src/date.js", "use": "@now/node" },
     { "src": "README.md", "use": "@now/static" },
-    { "src": "src/mongo.js", "use": "@now/node-server@canary" },
-    { "src": "src/koa.js", "use": "@now/node@canary" },
-    { "src": "src/fs.js", "use": "@now/node-server@canary" }
+    { "src": "src/mongo.js", "use": "@now/node-server" },
+    { "src": "src/koa.js", "use": "@now/node" },
+    { "src": "src/fs.js", "use": "@now/node-server" }
   ],
   "routes": [
     { "src": "/readme", "dest": "/README.md" },
